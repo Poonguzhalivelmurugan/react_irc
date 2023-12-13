@@ -1,0 +1,42 @@
+/*JavaScript Modules: 
+
+These are the best implementation of Closure. Modules are small units of independent, reusable code that are desired to be used as the building blocks in creating a non-trivial Javascript application. Modules let the developer define private and public members separately, making it one of the more desired design patterns in the JavaScript paradigm. You may see modules as Classes as in any other Object-Oriented Programming Language. 
+
+Example*/
+
+<script>
+	// This is a Rectangle Module.
+	function Rectangle() {
+		var length, width;
+	
+		function create(l, w) {
+			length = l;
+			width = w;
+		}
+	
+		function getArea() {
+			return (length * width);
+		}
+	
+		function getPerimeter() {
+			return (2 * (length + width));
+		}
+	
+		// This is the object to consist public members.
+		// The rest are private members.
+		var publicAPI = {
+			create: create,
+			getArea: getArea,
+			getPerimeter: getPerimeter
+		};
+	
+		// To be returned upon creation of a new instance.
+		return publicAPI;
+	}
+	
+	// Create a Rectangle module instance
+	var myRect = Rectangle();
+	myRect.create(5, 4);
+	console.log("Area: " + myRect.getArea());
+	console.log("Perimeter: " + myRect.getPerimeter());
+</script>
