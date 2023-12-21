@@ -1,0 +1,21 @@
+.navbar {
+  width: 100%;
+  height: 200px;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/563/737/large_2x/3d-realistic-natural-beauty-cosmetic-product-for-face-or-body-care-background-design-template-of-fashion-cosmetics-product-for-ads-flyer-or-magazine-background-free-vector.jpg");
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.links {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  margin-left: 20px;
+  font-size: 25px;
+}
